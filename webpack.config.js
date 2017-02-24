@@ -9,23 +9,22 @@ module.exports = {
   },
 
   module: {
-    preLoaders: [
-      {
-        test: /\.rt\.html/,
-        include: path.join(__dirname, 'js'),
-        loader: 'react-templates-loader?targetVersion=0.14.0'
-      }
-    ],
     loaders: [
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
-        loaders: ['babel?presets[]=es2015']
+        loaders: ["babel?presets[]=es2015"]
       },
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
         loaders: ['babel?presets[]=react']
+      },
+
+      {
+        test: /\.rt\.html$/,
+        loaders: ["babel?presets[]=es2015", "react-templates-loader?modules=es6"],
+        exclude: /node_modules/
       },
     ]
   }
