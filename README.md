@@ -7,9 +7,9 @@ Includes
 --------
 
 * WebPack
-* Autoprefixer
 * Babel
-* PostCSS
 * ReactJS
+* JumpsuitJS
+* React Templates
 
 v.0.1
